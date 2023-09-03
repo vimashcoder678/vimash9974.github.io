@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Decore</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- third party css -->
+        <link href="assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/hover.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+        <style>
+            body{
+               
+            }
+        .navshadow {
+            background-color: #343a40; /* Dark background color */
+             box-shadow: 0 0 5px grey; /* Light grey box-shadow */
+        }
+       
+        .dropdown-item:hover{
+            background-color: grey;
+        }
+        .topnav {
+            background-color: #343a40; /* Dark background color */
+        }
+        .footerspark{
+            animation: flashingSpark 20s linear infinite;
+            color: white;
+        }
+        .navspark {
+            width: 100%;
+            height: 100%;
+            animation: flashingSpark 20s linear infinite;
+        }
+
+        @keyframes flashingSpark {
+            0% {
+                background-image: linear-gradient(45deg, black, #96B6C5);
+            }
+            20% {
+                background-image: linear-gradient(45deg, grey, #6F61C0);
+            }
+            40% {
+                background-image: linear-gradient(45deg, black, #61677A);
+            }
+            60% {
+                background-image: linear-gradient(45deg, #8062D6, #8062D6);
+            }
+            80% {
+                background-image: linear-gradient(45deg, black, #A1CCD1);
+            }
+            100% {
+                background-image: linear-gradient(45deg, grey, #A8A196);
+            }
+        }
+    
+         .card-row {
+            background-color: #f5f5f5; /* Background color for the card row */
+            padding: 20px 0; /* Add some padding for spacing */
+            display: flex;
+            justify-content: space-around;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:hover .content-overlay {
+            opacity: 1;
+        }
+    </style>
+    </head>
+
+    <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+    <div class="topnav bg-dark flash navspark">
+        <nav class="navbar navbar-expand-lg  navbar-dark">
+            <div class="container">
+
+                <!-- logo -->
+                <a href="index.html" class="navbar-brand me-lg-5">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD7tQXUot5K4Pi3ARRs08p_aZRkq22ApDe4nxO0OrWcA&s" alt="" style="border-radius: 50%; width: 50px;height: 40px;" class="logo-dark" height="18" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+
+                <!-- menus -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- left menu -->
+                    <ul class="navbar-nav me-auto align-items-center">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link " href="Menu.html" id="topnav-about"  aria-haspopup="true"  style="color:white;">
+                                               Home
+                                            </a>
+                                        </li>
+                                       
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-fab" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                                               Fabric Collection <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-fab">
+                                                <div class="dropdown">
+                                                        <a class="dropdown-item " href="Menu.html" >
+                                                            Polyster Fabric<div class="arrow-down" id="topnav-poly" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="topnav-poly">
+                                                            <a href="RCFabric.html" class="dropdown-item">RC Fabric</a>
+                                                            <a href="PlainMatty.html" class="dropdown-item">Plain Matty</a>
+                                                            <a href="SmallDot.html" class="dropdown-item">Small Dot</a>
+                                                            <a href="Bijli.html" class="dropdown-item">Bijli</a>
+                                                        </div>                                  
+                                            </div>
+                                                <div class="dropdown">
+                                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-jute" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Jute Fabric<div class="arrow-down"></div>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="topnav-jute">
+                                                            <a href="Nano.html" class="dropdown-item">Nano</a>
+                                                            <a href="Desire.html" class="dropdown-item">Desire</a>
+                                                        </div>                                  
+                                            </div>
+                                            <div class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-cheni" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Chenille Fabric<div class="arrow-down"></div>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="topnav-cheni">
+                                                    <a href="MolfinFabric.html" class="dropdown-item">Molfin Fabric</a>
+                                                    <a href="Amoshi.html" class="dropdown-item">Amoshi</a>
+                                                    <a href="Hitech.html" class="dropdown-item">Hitech</a>
+                                                    <a href="Montana.html" class="dropdown-item">Montana</a>
+                                                    <a href="MontanaStrip.html" class="dropdown-item">Montana Strip</a>
+                                                </div>                                  
+                                            </div>
+                                            <div class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-chenijq" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Chenille Jquard Fabric<div class="arrow-down"></div>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="topnav-chenijq">
+                                                    <a href="MolfinFabric.html" class="dropdown-item">Molfin Fabric</a>
+                                                    <a href="Amoshi.html" class="dropdown-item">Amoshi</a>
+                                                    <a href="Hitech.html" class="dropdown-item">Hitech</a>
+                                                    <a href="Montana.html" class="dropdown-item">Montana</a>
+                                                    <a href="MontanaStrip.html" class="dropdown-item">Montana Strip</a>
+                                                </div>                                  
+                                            </div>
+                                            <a href="FlockFabric.html" class="dropdown-item">Flock Fabrics</a>
+                                            <a href="BlackoutFabric.html" class="dropdown-item">Blackout Fabrics</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-cust" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                                                Customise Fabric<div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-cust">
+                                                <div class="dropdown">
+                                                
+                                                <a href="FabricRequire.html" class="dropdown-item">Fabric As Per Your Requirement</a>
+                                                <a href="FabricProcess.html" class="dropdown-item">Processing As Per Your Requirement</a>
+                                               
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-ind" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                                                Industries We Serve<div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-ind">
+                                                <div class="dropdown">
+                                                
+                                                <a href="ChairFabric.html" class="dropdown-item">Chair Fabric</a>
+                                                <a href="SofaFabric.html" class="dropdown-item">Sofa Fabric</a>
+                                                <a href="PanalpasteFabric.html" class="dropdown-item">Panelling and Wall Pasting Fabric</a>
+                                                <a href="SeatCoverFabric.html" class="dropdown-item">Seat Cover Fabric</a>
+                                                <a href="AuditoriumFabric.html" class="dropdown-item">Auditorium Fabrics</a>
+                                                <a href="FabricInterior.html" class="dropdown-item">Fabric For Interior Design</a>
+                                                <a href="ragFootapFabric.html" class="dropdown-item">Rags and Footmates Fabric</a>
+                                                <a href="CushionFabric.html" class="dropdown-item">Cushion Fabrics</a>
+                                                <a href="ExportFabric.html" class="dropdown-item">Export Fabrics</a>
+                                               
+                                            </div>
+                                        </li> 
+                                         <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="Menu.html"  style="color:white;">About Us <div class="arrow-down" id="topnav-about" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div></a> 
+
+                                            <div class="dropdown-menu" aria-labelledby="topnav-about">
+                                                <div class="dropdown">
+                                                
+                                                <a href="CompanyProfile.html" class="dropdown-item">Company Profile</a>
+                                                <a href="Infrastructure.html" class="dropdown-item">Infrastructure</a>
+                                               
+                                            </div>
+                                        </li>
+                                         <li class="nav-item dropdown">
+                                            <a class="nav-link " href="Menu.html" id="topnav-about"  aria-haspopup="true"  style="color:white;">
+                                                Contact Us 
+                                            </a>
+                                        </li>              
+                    </ul>
+
+                    <!-- right menu -->
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item me-0">
+                         <div class="app-search dropdown">
+                             <form>
+                                 <div class="input-group">
+                                     <input type="text" class="form-control" placeholder="Search..." id="top-search">
+                                     <span class="mdi mdi-magnify search-icon"></span>
+                                    <button class="input-group-text btn-secondary" type="submit">Search</button>
+                                 </div>
+                             </form> 
+                         </div>        
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>                <!-- end Topbar -->
+                        
+    
+                    <!-- Start Content-->
+                    <div class="container-fluid mb-4">
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Polyster Fabric">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Polyster Fabric</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Jute Fabric">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Jute Fabric</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Chenille Fabric">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Chenille Fabric</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Chenille Fabric">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Chenille Fabric</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Chenille Jaquard Fabric">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Chenille Jaquard Fabric</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Flock Fabrics">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Flock Fabrics</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Blackout Fabrics">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Blackout Fabrics</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top img-fluid" src="assets/images/pi3.jpg" alt="Blackout Fabrics">
+                                        <div class="content-overlay">
+                                            <h4 class="card-title">Blackout Fabrics</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer footerspark">
+                    <div class="container-fluid ">
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-end footer-links d-none d-md-block" >
+                                    <a style="color: white" href="javascript: void(0);">About</a>
+                                    <a style="color: white" href="javascript: void(0);">Support</a>
+                                    <a style="color: white" href="javascript: void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="end-bar">
+
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="end-bar-toggle float-end">
+                    <i class="dripicons-cross noti-icon"></i>
+                </a>
+                <h5 class="m-0">Settings</h5>
+            </div>
+
+            <div class="rightbar-content h-100" data-simplebar>
+
+                <div class="p-3">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, layout width, etc.
+                    </div>
+
+                    <!-- Settings -->
+                    <h5 class="mt-3">Color Scheme</h5>
+                    <hr class="mt-1" />
+
+                    <div class="form-check form-switch mb-1">
+                        <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="light"
+                            id="light-mode-check" checked />
+                        <label class="form-check-label" for="light-mode-check">Light Mode</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="dark"
+                            id="dark-mode-check" />
+                        <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
+                    </div>
+
+                    <!-- Width -->
+                    <h5 class="mt-4">Width</h5>
+                    <hr class="mt-1" />
+                    <div class="form-check form-switch mb-1">
+                        <input type="checkbox" class="form-check-input" name="width" value="fluid" id="fluid-check" checked />
+                        <label class="form-check-label" for="fluid-check">Fluid</label>
+                    </div>
+                    <div class="form-check form-switch mb-1">
+                        <input type="checkbox" class="form-check-input" name="width" value="boxed" id="boxed-check" />
+                        <label class="form-check-label" for="boxed-check">Boxed</label>
+                    </div>
+
+
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
+
+                        <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/"
+                            class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Purchase Now</a>
+                    </div>
+                </div> <!-- end padding-->
+
+            </div>
+        </div>
+
+        <div class="rightbar-overlay"></div>
+        <!-- /End-bar -->
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- third party js -->
+        <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
+        <script src="assets/js/vendor/dataTables.bootstrap5.js"></script>
+        <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
+        <script src="assets/js/vendor/responsive.bootstrap5.min.js"></script>
+        <script src="assets/js/vendor/dataTables.checkboxes.min.js"></script>
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="assets/js/pages/demo.customers.js"></script>
+        <!-- end demo js-->
+
+    </body>
+</html>
